@@ -21,3 +21,14 @@ footer .animation {
     top: 0;
     left: 0;
 }
+
+circle {
+    transition: 3s all linear;
+    fill: transparent;
+}
+path {
+    transition: 3s all linear;
+    stroke-width: 1;
+    fill: rgb(232, 157, 7);
+    stroke: rgb(162, 127, 51);
+}

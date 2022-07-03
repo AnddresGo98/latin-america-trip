@@ -1,12 +1,13 @@
 <footer>
-    <div class="animation" #graph (window:resize)="onResizeGraph($event)">
+    <div class="animation" #graph>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="viewBox" width="100%" height="100%">
-            <g>
-                <rect x="10" y="10" width="50" height="50"/>
+            <g *ngFor="let fish of fishes; index as i">
+                <path [attr.d]="fish.path"/>
+                <circle [attr.cx]="fish.cx" [attr.cy]="fish.cy" [attr.r]="radius" #circle (mousemove)="moveFish($event, circle, i)"/>
             </g>
         </svg>
     </div>
-    <div class="content">
+    <!-- <div class="content">
         <div class="content-message">{{'Page made by Andrés González'}}</div>
-    </div>
+    </div> -->
 </footer>
